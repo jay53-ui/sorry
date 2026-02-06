@@ -58,7 +58,7 @@ export default function EndingPage({ setCurrentPage }) {
                         transition={{ duration: 1.1, delay: 0 }}
                         className="text-lg text-pink-200 leading-relaxed max-w-lg mx-auto"
                     >
-                        <span className="lt">Ab bas tumhare taane ka wait hai 😅</span>
+                        <span className="lt">Ab bas tumhare taunt ka wait hai 😅</span>
                     </motion.p>
 
                 </motion.div>
