@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import StarryBackground from "@/components/StarryBackground"
+import PasswordGate from "@/components/PasswordGate"
 import OpeningPage from "@/components/OpeningPage"
 import DiaryPage from "@/components/DiaryPage"
 import ApologyPage from "@/components/ApologyPage"
@@ -41,29 +42,29 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 relative overflow-hidden">
-      <StarryBackground />
+    <PasswordGate>
+      <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+        <StarryBackground />
 
-      
-
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentPage}
-          initial="initial"
-          animate="in"
-          exit="out"
-          variants={pageVariants}
-          transition={pageTransition}
-          className="relative z-10"
-        >
-          <CurrentComponent
-            setCurrentPage={setCurrentPage}
-            setMusicPlaying={setMusicPlaying}
-            setShowMusicPlayer={setShowMusicPlayer}
-            musicPlaying={musicPlaying}
-          />
-        </motion.div>
-      </AnimatePresence>
-    </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPage}
+            initial="initial"
+            animate="in"
+            exit="out"
+            variants={pageVariants}
+            transition={pageTransition}
+            className="relative z-10"
+          >
+            <CurrentComponent
+              setCurrentPage={setCurrentPage}
+              setMusicPlaying={setMusicPlaying}
+              setShowMusicPlayer={setShowMusicPlayer}
+              musicPlaying={musicPlaying}
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </PasswordGate>
   )
 }
