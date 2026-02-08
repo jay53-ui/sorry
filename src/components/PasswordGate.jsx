@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 // Simple non-persistent password gate. Edit PASSWORD below.
-const PASSWORD = "always a friend and a musibat"
+const PASSWORD = "jayant"
 
 export default function PasswordGate({ children }) {
   const [unlocked, setUnlocked] = useState(false)
